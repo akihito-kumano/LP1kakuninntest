@@ -5,11 +5,11 @@ body {
   line-height: 1.8;
   letter-spacing: 1px;
   word-break: break-all;
-  color: #333;
+  color: rgb(168, 106, 106);
 }
 a {
   text-decoration: none;
-  color: #333;
+  color: rgb(168, 106, 106);
 }
 li {
   list-style: none;
@@ -27,6 +27,7 @@ li {
   width: 100%;
   display: table;
   table-layout: fixed;
+  font-family: 'Kaushan Script',cursive;
 }
 .header_nav ul li {
   display: table-cell;
@@ -40,7 +41,7 @@ li {
   font-weight: 700;
 }
 .header_nav ul li a:hover {
-  color: #888;
+  color:rgb(168, 106, 106);
   border-bottom: solid 2px #ccc;
 }
 .header_nav ul li a span {
@@ -53,7 +54,7 @@ li {
   width: 100%;
   height: 500px;
   overflow: hidden;
-  background: url("../img/top.png") no-repeat center;
+  background: url("../img-LP1/top-1.jpg") no-repeat center;
   background-size: cover;
 }
 .top_all::after {
@@ -64,7 +65,7 @@ li {
   z-index: 1;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.25);
+  background: url(../img-LP1/top-1.jpg) no-repeat center;
 }
 .top_inner {
   position: absolute;
@@ -75,18 +76,20 @@ li {
   transform: translate(-50%, -50%);
 }
 .top_inner h1 {
-  font-size: 60px;
+  font-size: 100px;
   font-weight: 500;
-  color: #ddd;
+  color: rgb(161, 68, 68);
+  font-family: 'Kaushan Script',cursive;
 }
 .top_inner p {
-  font-size: 20px;
+  font-size: 50px;
   font-weight: 700;
-  color: #ddd;
+  color: rgb(253, 230, 124);
+  font-family: 'Kaushan Script',cursive;
 }
 .section {
   padding: 150px 0;
-  border-top: solid 3px #fe9;
+  border-top: solid 3px rgb(168, 106, 106);
 }
 .section:nth-of-type(odd) {
   background-color: #eee;
@@ -97,31 +100,31 @@ li {
 .about_img::after {
   content: "";
   position: absolute;
-  background: url("../img/about.png") no-repeat center;
+  background: url("../img-LP1/about.jpg") no-repeat center;
   background-size: cover;
   top: 0;
   left: 50%;
   width: 50%;
   height: 100%;
 }
-.concept_img {
+.news_img {
   position: relative;
 }
-.concept_img::after {
+.news_img::after {
   content: "";
   position: absolute;
-  background: url("../img/concept.png") no-repeat center;
+  background: url("../img-LP1/news-1.jpg") no-repeat center;
   background-size: cover;
   top: 0;
   right: 50%;
   width: 50%;
   height: 100%;
 }
-.descript {
+.news {
   width: 40%;
   height: 50%;
 }
-.descript_right {
+.news_right {
   margin-left: 60%;
 }
 .title {
@@ -132,31 +135,19 @@ li {
   line-height: 1.4;
   font-size: 40px;
   font-weight: bold;
-  color: #555;
-  border-left: solid 4px #fe9;
+  color: rgb(168, 106, 106);
+  font-family: 'Kaushan Script',cursive;
 }
 
 .title span {
-display: block;
+display: inline-block;
 font-size: 20px;
+font-family: 'Kaushan Script',cursive;
 }
-.txt h3 {
-font-size: 30px;
-color: #555;
-margin-bottom: 30px;
-}
-.txt p {
-  color: #555;
-}
-.txt p strong {
-  font-weight: bold;
-  color: #555;
-  background: linear-gradient(transparent 60%, #fe9);
-}
-.frame {
+.frame_all {
   display: inline-block;
-  width: 35%;
-  height: 100%;
+  width: 500px;
+  height: auto;
   background-color: #eee;
   border-radius: 5px;
   margin: 30px;
@@ -180,7 +171,7 @@ font-size: 20px;
   position: absolute;
   top: 50%;
   z-index: 1;
-  background-color: #333;
+  background-color: #803333;
   width: 40%;
   height: 2px;
   margin-top: -1px;
@@ -189,11 +180,17 @@ font-size: 20px;
 .sub_title span {
   position: relative;
   padding-right: 10px;
+  font-family: 'Kaushan Script',cursive;
+  font-size: 20px;
+  color: #803333;
+}
+.txt ul li span {
+  background: linear-gradient(transparent 60%, #fe9);
 }
 
 .photo {
-  width: 340px;
-  height: 220px;
+  width: 500px;
+  height: auto;
 }
 
 .price {
@@ -214,23 +211,10 @@ font-size: 20px;
   font-size: 45px;
 }
 
-.frame_all {
-  display: flex;
-}
-
-.frame_profile {
-  display: inline-block;
-  width: 35%;
-  height: 100%;
-  background-color: #eee;
-  border-radius: 5px;
-  margin: 30px;
-  padding: 40px;
-}
-
-.profile_bg {
-  background-color: #fff;
-  height: 460px;
+.phot {
+  width: 500px;
+  height: auto;
+  text-align: center;
 }
 
 .intro {
@@ -258,15 +242,6 @@ left: 0;
 color: #555;
 }
 
-.txt table th {
-  padding-right: 10px;
-  border-right: solid 3px #fe9;
-}
-
-.txt table td {
-  padding-left: 10px;
-}
-
 .blog_block {
   display: inline-block;
   margin: 5px;
@@ -279,13 +254,15 @@ color: #555;
 .blog_body h3 {
   font-size: 18px;
   font-weight: bold;
-  color: #555;
+  color: #803333;
   margin-top: 10px;
+  font-family: 'Kaushan Script',cursive;
 }
 
 .blog_body p {
   font-size: 14px;
-  color: #555;
+  color: #803333;
+  font-family: 'Kaushan Script',cursive;
 }
 
 .button {
@@ -294,7 +271,8 @@ color: #555;
   background-color: #fe9;
   border-radius: 10px;
   width: 25%;
-  margin: 0 auto 150px;
+  margin: 0 auto 20px;
+  font-family: 'Kaushan Script',cursive;
 }
 
 .button:hover {
@@ -304,22 +282,20 @@ color: #555;
 
 .button a {
   font-size: 18px;
-  color: #555;
+  color: #803333;
 }
 
 .bottom {
-  background-color: #555;
+  background-color: #ccc;
   padding: 30px 0;
   text-align: center;
-  color: #eee;
+  color: #ccc;
 }
 
-.footer_logo {
+.footer_logo h5 {
   text-align: center;
-}
-
-.footer_logo img {
-  width: 200px;
+  font-size: 30px;
+  font-family: 'Kaushan Script',cursive;
 }
 
 .footer_sns {
@@ -332,4 +308,7 @@ color: #555;
 
 .footer_sns li a img {
   width: 70px;
+}
+.copyright p {
+  color: #803333;
 }
