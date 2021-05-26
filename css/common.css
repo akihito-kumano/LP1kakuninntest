@@ -57,7 +57,7 @@ li {
   background: url("../img-LP1/top-1.jpg") no-repeat center;
   background-size: cover;
 }
-.top_all::after {
+.top_all:after {
   content: "";
   position: absolute;
   top: 0;
@@ -65,7 +65,6 @@ li {
   z-index: 1;
   width: 100%;
   height: 100%;
-  background: url(../img-LP1/top-1.jpg) no-repeat center;
 }
 .top_inner {
   position: absolute;
@@ -145,14 +144,17 @@ font-size: 20px;
 font-family: 'Kaushan Script',cursive;
 }
 .frame_all {
-  display: inline-block;
+  display: block;
   width: 500px;
   height: auto;
   background-color: #eee;
   border-radius: 5px;
-  margin: 30px;
+  margin: auto;
   padding: 40px;
 }
+
+
+
 
 .txt h3 span {
 display: block;
@@ -160,21 +162,26 @@ font-size: 20px;
 }
 
 .sub_title {
-  position: relative;
-  font-size: 18px;
+  display: flex;
+  font-size: 24px;
   color: #333;
-  padding: 10px 0;
+  align-items: center;
 }
 
-.sub_title::after {
+.sub_title:after, .sub_title:before {
   content: "";
-  position: absolute;
-  top: 50%;
-  z-index: 1;
+  flex-grow: 1;
+  height: 1px;
   background-color: #803333;
-  width: 40%;
-  height: 2px;
-  margin-top: -1px;
+  display: block;
+}
+
+.sub_title:after {
+  margin-right: 4em;
+}
+
+.sub_title:before {
+  margin-left: 4em;
 }
 
 .sub_title span {
@@ -242,13 +249,16 @@ left: 0;
 color: #555;
 }
 
-.blog_block {
-  display: inline-block;
-  margin: 5px;
+.blog_body img {
+  margin: auto;
+  display: block;
 }
 
-.blog_body {
-  margin-top: 10px;
+.blog_block a {
+  display: block;
+  margin: auto;
+  width: 500px;
+  height: 240px;
 }
 
 .blog_body h3 {
@@ -257,12 +267,14 @@ color: #555;
   color: #803333;
   margin-top: 10px;
   font-family: 'Kaushan Script',cursive;
+  text-align: center;
 }
 
 .blog_body p {
   font-size: 14px;
   color: #803333;
   font-family: 'Kaushan Script',cursive;
+  text-align: center;
 }
 
 .button {
@@ -271,7 +283,7 @@ color: #555;
   background-color: #fe9;
   border-radius: 10px;
   width: 25%;
-  margin: 0 auto 20px;
+  margin: 20px auto 20px;
   font-family: 'Kaushan Script',cursive;
 }
 
